@@ -42,7 +42,7 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
      */
     public function getCurrentPage()
     {
-        return $this->paginator->getCurrentPage();
+        return $this->paginator->currentPage();
     }
 
     /**
@@ -51,7 +51,7 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
      */
     public function getLastPage()
     {
-         return $this->paginator->getLastPage();
+         return $this->paginator->lastPage();
     }
 
     /**
@@ -60,7 +60,7 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
      */
     public function getTotal()
     {
-         return $this->paginator->getTotal();
+         return $this->paginator->total();
     }
 
     /**
@@ -78,7 +78,7 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
      */
     public function getPerPage()
     {
-        return $this->paginator->getPerPage();
+        return $this->paginator->perPage();
     }
 
     /**
@@ -88,7 +88,7 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
      */
     public function getUrl($page)
     {
-        return $this->paginator->getUrl($page);
+        return $this->paginator->url($page);
     }
 
     /**
