@@ -11,7 +11,7 @@
 
 namespace League\Fractal\Pagination;
 
-use Illuminate\Contacts\Pagination\Paginator;
+use Illuminate\Contracts\Pagination\Paginator;
 
 /**
  * A paginator adapter for illuminate/pagination
@@ -43,6 +43,24 @@ class IlluminatePaginatorAdapter implements PaginatorInterface
     public function getCurrentPage()
     {
         return $this->paginator->currentPage();
+    }
+
+    /**
+     * Get last page
+     * @return integer
+     */
+    public function getLastPage()
+    {
+         return $this->paginator->lastPage();
+    }
+
+    /**
+     * Get total
+     * @return integer
+     */
+    public function getTotal()
+    {
+         return $this->paginator->total();
     }
 
     /**
